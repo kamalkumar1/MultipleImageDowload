@@ -14,7 +14,7 @@ class DownloadManager : NSObject, URLSessionDelegate, URLSessionDownloadDelegate
     var onProgress : ProgressHandler? {
         didSet {
             if onProgress != nil {
-                let _ = activate(index: "index")
+                let _ = activates()
             }
         }
     }
@@ -23,8 +23,9 @@ class DownloadManager : NSObject, URLSessionDelegate, URLSessionDownloadDelegate
         super.init()
     }
 
-    func activate(index: String) -> URLSession {
-        let config = URLSessionConfiguration.background(withIdentifier: "\(Bundle.main.bundleIdentifier!).background" + index)
+    func activates() -> URLSession {
+       let config = URLSessionConfiguration.background(withIdentifier: "\(Bundle.main.bundleIdentifier!).background")
+       // let config = URLSessionConfiguration.default
 
         // Warning: If an URLSession still exists from a previous download, it doesn't create a new URLSession object but returns the existing one with the old delegate object attached!
         return URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue())
@@ -32,6 +33,7 @@ class DownloadManager : NSObject, URLSessionDelegate, URLSessionDownloadDelegate
 
     private func calculateProgress(session : URLSession, completionHandler : @escaping (Float) -> ()) {
         session.getTasksWithCompletionHandler { (tasks, uploads, downloads) in
+            
             let progress = downloads.map({ (task) -> Float in
                 if task.countOfBytesExpectedToReceive > 0 {
                     return Float(task.countOfBytesReceived) / Float(task.countOfBytesExpectedToReceive)

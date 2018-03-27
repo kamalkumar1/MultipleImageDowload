@@ -16,6 +16,9 @@
 		A943BF14205F847F00D12B7B /* Multiple_image_downloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943BF13205F847F00D12B7B /* Multiple_image_downloadTests.swift */; };
 		A943BF1F205F847F00D12B7B /* Multiple_image_downloadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943BF1E205F847F00D12B7B /* Multiple_image_downloadUITests.swift */; };
 		A943BF2D205F86E400D12B7B /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943BF2C205F86E400D12B7B /* ImageTableViewCell.swift */; };
+		A9612D312067EBD000FFEC71 /* DownloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9612D302067EBD000FFEC71 /* DownloadData.swift */; };
+		A9612D3320680FCF00FFEC71 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9612D3220680FCF00FFEC71 /* SessionDelegate.swift */; };
+		A9612D3520681F7500FFEC71 /* URLConfigureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9612D3420681F7500FFEC71 /* URLConfigureManager.swift */; };
 		A9932FC02064D39A0071AE57 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9932FBF2064D39A0071AE57 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,9 @@
 		A943BF1E205F847F00D12B7B /* Multiple_image_downloadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiple_image_downloadUITests.swift; sourceTree = "<group>"; };
 		A943BF20205F847F00D12B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A943BF2C205F86E400D12B7B /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		A9612D302067EBD000FFEC71 /* DownloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadData.swift; sourceTree = "<group>"; };
+		A9612D3220680FCF00FFEC71 /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		A9612D3420681F7500FFEC71 /* URLConfigureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfigureManager.swift; sourceTree = "<group>"; };
 		A9932FBF2064D39A0071AE57 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,9 @@
 				A943BF0A205F847F00D12B7B /* Info.plist */,
 				A943BF2C205F86E400D12B7B /* ImageTableViewCell.swift */,
 				A9932FBF2064D39A0071AE57 /* ImageViewController.swift */,
+				A9612D302067EBD000FFEC71 /* DownloadData.swift */,
+				A9612D3220680FCF00FFEC71 /* SessionDelegate.swift */,
+				A9612D3420681F7500FFEC71 /* URLConfigureManager.swift */,
 			);
 			path = "Multiple image download";
 			sourceTree = "<group>";
@@ -272,7 +281,10 @@
 				A943BF01205F847F00D12B7B /* ViewController.swift in Sources */,
 				A9932FC02064D39A0071AE57 /* ImageViewController.swift in Sources */,
 				A943BEFF205F847F00D12B7B /* AppDelegate.swift in Sources */,
+				A9612D3520681F7500FFEC71 /* URLConfigureManager.swift in Sources */,
 				A911AB8E2060CC0500BB8FB3 /* DownloadManager.swift in Sources */,
+				A9612D312067EBD000FFEC71 /* DownloadData.swift in Sources */,
+				A9612D3320680FCF00FFEC71 /* SessionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

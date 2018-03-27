@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ipProgress: UIProgressView!
@@ -21,6 +22,18 @@ class ImageTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func BindDataToCell(data:DownloadData,queue:DispatchQueue) -> Void {
+        
+        var named = URLConfigureManager.shared.activatesSession().downloadTask(with: URL.init(string: data.m_url)!);
+        named.resume()
+//        queue.async {
+//            let image = Downloads.downloadImageWithURL(url: data.m_url);
+//            DispatchQueue.main.async {
+//                self.imgView.image = image;
+//                            }
+//        }
+        
     }
 
 }
