@@ -9,7 +9,15 @@
 import UIKit
 
 
-class ImageTableViewCell: UITableViewCell {
+class ImageTableViewCell: UITableViewCell,TrackCellDelegate {
+    func pauseTapped(urls: String, filepath: String) {
+        print(urls)
+    }
+    
+    func resumeTapped(value: Float) {
+        
+    }
+    
 
     @IBOutlet weak var ipProgress: UIProgressView!
     @IBOutlet weak var imgView: UIImageView!
@@ -24,9 +32,11 @@ class ImageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func BindDataToCell(data:DownloadData,queue:DispatchQueue) -> Void {
+        let gfgf = URLConfigureManager.shared.activatesSession(track: self).downloadTask(with: URL.init(string: data.m_url)!)
+        gfgf.resume()
         
-        var named = URLConfigureManager.shared.activatesSession().downloadTask(with: URL.init(string: data.m_url)!);
-        named.resume()
+//        let named = URLConfigureManager.shared.activatesSession(track:self).downloadTask(with: URL.init(string: data.m_url)!);
+//        named.resume()
 //        queue.async {
 //            let image = Downloads.downloadImageWithURL(url: data.m_url);
 //            DispatchQueue.main.async {
